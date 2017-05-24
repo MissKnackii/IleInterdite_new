@@ -37,6 +37,7 @@ public class Coordonnées {
     }
 
     public void setLigne(int ligne) {
+        
         this.ligne = ligne;
     }
 }
