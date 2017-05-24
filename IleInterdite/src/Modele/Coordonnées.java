@@ -10,13 +10,33 @@ package Modele;
  * @author chaulaic
  */
 public class Coordonnées {
-    private int colonne;
-    private int ligne;
-    private Tuiles tuile;
+    public int colonne;
+    public int ligne;
+    public Tuiles tuile;
     
     public void Coordonnées(int colonne, int ligne, Tuiles tuile) {
-        this.colonne = colonne;
-        this.ligne = ligne;
+        this.setColonne(colonne);
+        this.setLigne(ligne);
         this.tuile = tuile;
+    }
+
+    public int getColonne() {
+        return colonne;
+    }
+
+    public int getLigne() {
+        return ligne;
+    }
+
+    public Tuiles getTuile() {
+        return tuile;
+    }
+
+    public void setColonne(int colonne) {
+        this.colonne = colonne;
+    }
+
+    public void setLigne(int ligne) {
+        this.ligne = ligne;
     }
 }
