@@ -23,7 +23,7 @@ public class Aventurier {
         this.nom = nom;
         this.vivant = vivant;
         this.nbAction = nbAction;
-        this.couleur = couleur;
+        
     }
     
     public void deplacement() {
