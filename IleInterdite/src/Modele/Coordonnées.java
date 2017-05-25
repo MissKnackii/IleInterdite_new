@@ -32,11 +32,11 @@ public class Coordonnées {
         return tuile;
     }
 
-    public void setColonne(int colonne) {
+    private void setColonne(int colonne) {
         this.colonne = colonne;
     }
 
-    public void setLigne(int ligne) {
+    private void setLigne(int ligne) {
         
         this.ligne = ligne;
     }
