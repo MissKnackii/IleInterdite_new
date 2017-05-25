@@ -13,17 +13,17 @@ import java.util.ArrayList;
  * @author chaulaic
  */
 public class Aventurier {
-    private String nom;
-    private Boolean vivant;
-    private int nbAction;
-    private Color couleur;
-    private ArrayList<CartesTresors> cartesEnMain;
+    String nom;
+    Boolean vivant;
+    int nbAction;
+    Color couleur;
+    ArrayList<CartesTresors> cartesEnMain;
     
     public void Aventurier(String nom, Boolean vivant, int nbAction, Color couleur) {
-        this.nom = nom;
-        this.vivant = vivant;
-        this.nbAction = nbAction;
-        this.couleur = couleur;
+        this.setNom(nom);
+        this.setVivant(vivant);
+        this.setNbAction(nbAction);
+        this.setCouleur(couleur);
     }
     
     public void deplacement() {
@@ -39,4 +39,74 @@ public class Aventurier {
     //getPosition()
     
     //obtenirCarte()
+
+    /**
+     * @return the nom
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * @return the vivant
+     */
+    public Boolean getVivant() {
+        return vivant;
+    }
+
+    /**
+     * @return the nbAction
+     */
+    public int getNbAction() {
+        return nbAction;
+    }
+
+    /**
+     * @return the couleur
+     */
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    /**
+     * @return the cartesEnMain
+     */
+    public ArrayList<CartesTresors> getCartesEnMain() {
+        return cartesEnMain;
+    }
+
+    /**
+     * @param nom the nom to set
+     */
+    private void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    /**
+     * @param vivant the vivant to set
+     */
+    private void setVivant(Boolean vivant) {
+        this.vivant = vivant;
+    }
+
+    /**
+     * @param nbAction the nbAction to set
+     */
+    private void setNbAction(int nbAction) {
+        this.nbAction = nbAction;
+    }
+
+    /**
+     * @param couleur the couleur to set
+     */
+    private void setCouleur(Color couleur) {
+        this.couleur = couleur;
+    }
+
+    /**
+     * @param cartesEnMain the cartesEnMain to set
+     */
+    private void setCartesEnMain(ArrayList<CartesTresors> cartesEnMain) {
+        this.cartesEnMain = cartesEnMain;
+    }
 }
