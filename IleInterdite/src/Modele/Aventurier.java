@@ -5,19 +5,23 @@
  */
 package Modele;
 
+import static Modele.Etat.Inondee;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
  * @author chaulaic
  */
 public class Aventurier {
-    String nom;
-    Boolean vivant;
-    int nbAction;
-    Color couleur;
-    ArrayList<CartesTresors> cartesEnMain;
+    protected String nom;
+    protected Boolean vivant;
+    protected int nbAction;
+    protected Color couleur;
+    protected ArrayList<CartesTresors> cartesEnMain;
+    private Tuiles positionCourante;
+    
     
     public void Aventurier(String nom, Boolean vivant, int nbAction, Color couleur) {
         this.setNom(nom);
@@ -26,20 +30,7 @@ public class Aventurier {
         this.setCouleur(couleur);
     }
     
-    public void deplacement() {
-        
-    }
-
-    public void assecher() {
-        
-    }
-    
-    //getJoueur()
-    
-    //getPosition()
-    
-    //obtenirCarte()
-
+    //getteurs et setteurs :
     /**
      * @return the nom
      */
@@ -109,4 +100,38 @@ public class Aventurier {
     private void setCartesEnMain(ArrayList<CartesTresors> cartesEnMain) {
         this.cartesEnMain = cartesEnMain;
     }
+    
+    /**
+     * @return the positionCourante
+     */
+    public Tuiles getPositionCourante() {
+        return positionCourante;
+    }
+
+    /**
+     * @param positionCourante the positionCourante to set
+     */
+    public void setPositionCourante(Tuiles positionCourante) {
+        this.positionCourante = positionCourante;
+    }
+    
+    
+    
+    /*private Collection getTuileAdj(Grille g){
+        Collection<Tuiles> collecTuiAdj = new ArrayList();
+        collecTuiAdj.add(
+      
+            
+    }
+
+    public Collection getTuileInondée(Grille g) {
+        Collection<Tuiles> collecTuilesIn = new ArrayList();
+        for (Tuiles t : g.getTuiles()) {
+            if (t.getEtat() == Inondee) {
+                collecTuilesIn.add(t);
+            }        
+        }
+        return collecTuilesIn;
+    }*/
+    
 }

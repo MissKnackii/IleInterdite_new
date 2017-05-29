@@ -6,11 +6,29 @@
 package Modele;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 
 /**
  *
  * @author chaulaic
  */
 public class Grille {
+    private HashMap<Integer,Tuiles>aze = new HashMap<Integer,Tuiles>();
     private ArrayList<Tuiles> tuiles;
+
+    /**
+     * @return the tuiles
+     */
+    public ArrayList<Tuiles> getTuiles() {
+        return tuiles;
+    }
+
+    /**
+     * @param tuiles the tuiles to set
+     */
+    public void setTuiles(ArrayList<Tuiles> tuiles) {
+        this.tuiles = tuiles;
+    }
+ 
 }

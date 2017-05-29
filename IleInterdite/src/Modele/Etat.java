@@ -10,8 +10,8 @@ package Modele;
  * @author cault
  */
 public enum Etat {
-    Asseche,
-    Inonde,
-    coule
+    Assechee,
+    Inondee,
+    coulee
     
 }

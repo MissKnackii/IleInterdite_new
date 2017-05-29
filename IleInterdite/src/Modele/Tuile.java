@@ -12,7 +12,7 @@ package Modele;
 public enum Tuile {
     LePontDesAbimes,
     LaPorteDeBronze, // pion rouge
-    LaCaverneDesObres,
+    LaCaverneDesOmbres,
     LaPorteDeFer, // pion vilet
     LaPorteDOr, // pion jaune
     LesFalaiseDeLOubli,
@@ -33,5 +33,5 @@ public enum Tuile {
     LePalaisDesMarees,
     LeValDuCrepuscule,
     LaTourDuGuet,
-    LeJardinDesMurmures    
+    LeJardinDesMurmures  
 }
