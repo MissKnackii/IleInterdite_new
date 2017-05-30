@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util;
+package View;
 
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import javax.swing.JOptionPane;
-import model.aventuriers.Aventurier;
+import Modele.Aventurier;
 
 /**
  *
@@ -73,9 +73,9 @@ public class Utils {
     }
 
     public static ArrayList<Aventurier> melangerAventuriers(ArrayList<Aventurier> arrayList) {
-        if (Parameters.ALEAS) {
-            Collections.shuffle(arrayList);
-        }
+        /*if (Parameters.ALEAS) {
+        Collections.shuffle(arrayList);
+        }*/
         return arrayList ;
     }
     

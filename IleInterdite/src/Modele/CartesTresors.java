@@ -5,6 +5,8 @@
  */
 package Modele;
 
+import Utile.Tresor;
+
 /**
  *
  * @author chaulaic

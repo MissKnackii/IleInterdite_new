@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package Utile;
 
 /**
  *
  * @author chaulaic
  */
 public enum Couleur {
-    Rouge,
-    Bleu,
-    Vert,
-    Jaune,
-    Noir,
-    Blanc
+    ROUGE,
+    BLEU,
+    VERT,
+    JAUNE,
+    NOIR,
+    BLANC
 }
