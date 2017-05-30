@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package model;
 
 /**
  *
  * @author chaulaic
  */
-public class Cartes {
-    private int NumCartes;
+public enum Tresor {
+    Cristal_Ardent,
+    Pierre_Sacree,
+    Statue_du_Zephyr,
+    Calice_de_l_onde
+    
 }

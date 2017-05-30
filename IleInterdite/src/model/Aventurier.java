@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package model;
 
-import static Modele.Etat.Inondee;
+import static model.Etat.Inondee;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;

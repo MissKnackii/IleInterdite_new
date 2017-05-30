@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package model;
 
-import static Modele.Etat.Inondee;
+import static model.Etat.Inondee;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -45,7 +45,7 @@ public class Controleur {
                           "","LeTempleDuSoleil","LeTempleDeLaLune","LePalaisDesMarees","LeValDuCrepuscule","",
                           "","","LaTourDuGuet","LeJardinDesMurmures","",""};
     
-    public void patata(Grille g){
+    public void creerGrille(Grille g){
         for (int l = 0; l <= 6;l++) {
             for (int c = 0; c <= 6; c++) {
                 if ((l==1 || l==2 ) || (l == 5 || l== 6)) {
@@ -54,10 +54,12 @@ public class Controleur {
                     }
                 } else {
                     g.addTuiles((l*6 + c),(new Tuiles(listeTuile[l*6 + 6], new CoorD(l,c) )));
+                    g.getTuiles(l*6+c);
             }
         }
     }
     
+     
 }
         
           
