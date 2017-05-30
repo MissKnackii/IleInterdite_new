@@ -5,15 +5,21 @@
  */
 package Utile;
 
+import java.awt.Color;
+
 /**
  *
  * @author chaulaic
  */
-public enum Couleur {
+public enum Pion {
     ROUGE,
     BLEU,
     VERT,
     JAUNE,
     NOIR,
-    BLANC
+    BLANC;
+
+    public Color getCouleur() {
+        return Color.RED;
+    }
 }

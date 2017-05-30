@@ -2,7 +2,7 @@ package View;
 
 
 
-import Utile.Couleur;
+import Utile.Pion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
@@ -17,10 +17,9 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import static javax.swing.SwingConstants.CENTER;
 import javax.swing.border.MatteBorder;
-import utile.Utils.Couleurs;
 
  
-public class VueAventurier  {
+public class VueAventurier extends javax.swing.JFrame {
      
     private final JPanel panelBoutons ;
     private final JPanel panelCentre ;
@@ -110,7 +109,7 @@ public class VueAventurier  {
     
      public static void main(String [] args) {
         // Instanciation de la fenêtre 
-        VueAventurier vueAventurier = new VueAventurier ("Manon", "Explorateur",Couleur.ROUGE.getCouleur() );
+        VueAventurier vueAventurier = new VueAventurier ("Manon", "Explorateur",Pion.ROUGE.getCouleur() );
     }
 }
 
