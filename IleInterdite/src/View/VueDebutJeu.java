@@ -7,12 +7,12 @@ package View;
 
 import Utile.Pion;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import javafx.scene.paint.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -22,6 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import static javax.swing.SwingConstants.CENTER;
+import javax.swing.border.Border;
 import javax.swing.border.MatteBorder;
 
 /**
@@ -37,11 +38,24 @@ public class VueDebutJeu extends javax.swing.JFrame {
     private final JFrame window;
     private final JPanel mainPanel;
     private final JPanel titlePanel;
+    private final JPanel registerPanel;
+    private final JPanel registerGrid;
+    private final JPanel southBorderPanel;
+    
+    private final JTextField joueur1;
+    private final JTextField joueur2;
+    private final JTextField joueur3;
+    private final JTextField joueur4;
+//    private final JTextField joueur5;
+//    private final JTextField joueur6;
+    
+    private final JButton go;
+    private final JButton rules;
     
     public VueDebutJeu() {
         this.window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        window.setSize(400, 800);
+        window.setSize(400, 300);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         window.setLocation(dim.width/2-window.getSize().width/2,dim.height/2-window.getSize().height/2);
         this.window.setVisible(true);
@@ -51,6 +65,7 @@ public class VueDebutJeu extends javax.swing.JFrame {
         this.window.add(mainPanel);
         
         titlePanel = new JPanel( );
+        titlePanel.setBorder(BorderFactory.createLineBorder(java.awt.Color.darkGray));
         
         
             mainPanel.add(titlePanel , BorderLayout.NORTH);
@@ -58,15 +73,50 @@ public class VueDebutJeu extends javax.swing.JFrame {
             title.setFont(new Font("Serif",Font.BOLD, 25));
             titlePanel.add(title);
          
+        registerPanel = new JPanel();
         
+            mainPanel.add(registerPanel, BorderLayout.CENTER);
+            
+            registerGrid = new JPanel(new GridLayout(4,2));
+            
+                registerPanel.add(registerGrid);
+                
+                registerGrid.add(new JLabel("Joueur 1 : "));
+                joueur1 = new JTextField("");
+                registerGrid.add(joueur1);
+                registerGrid.add(new JLabel("Joueur 2 : "));
+                joueur2 = new JTextField("");
+                registerGrid.add(joueur2);
+                registerGrid.add(new JLabel("Joueur 3 : "));
+                joueur3 = new JTextField("");
+                registerGrid.add(joueur3);
+                registerGrid.add(new JLabel("Joueur 4 : "));
+                joueur4 = new JTextField("");
+                registerGrid.add(joueur4);
+//                registerGrid.add(new JLabel("Joueur 5 : "));
+//                joueur5 = new JTextField("");
+//                registerGrid.add(joueur5);
+//                registerGrid.add(new JLabel("Joueur 6 : "));
+//                joueur6 = new JTextField("");
+//                registerGrid.add(joueur6);
+                
+        southBorderPanel = new JPanel();  
         
-        this.window.repaint();
+            mainPanel.add(southBorderPanel, BorderLayout.SOUTH);
+            go = new JButton("Lets go !");
+            rules = new JButton("show rules");
+            
+            southBorderPanel.add(go);
+            southBorderPanel.add(rules);
+        
+        //this.window.repaint();
     }
     
     
     public static void main(String[] args) {
         
         VueDebutJeu debutJeu = new VueDebutJeu();
+        debutJeu.repaint();
         
         
     }
