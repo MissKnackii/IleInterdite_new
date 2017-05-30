@@ -30,5 +30,8 @@ public class Grille {
     public void setTuiles(ArrayList<Tuiles> tuiles) {
         this.tuiles = tuiles;
     }
- 
+    
+    public void addTuiles(Integer i,Tuiles t) {
+        aze.put(i, t);
+    }
 }

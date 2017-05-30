@@ -45,16 +45,16 @@ public class Controleur {
                           "","LeTempleDuSoleil","LeTempleDeLaLune","LePalaisDesMarees","LeValDuCrepuscule","",
                           "","","LaTourDuGuet","LeJardinDesMurmures","",""};
     
-    public void patata(){
-        for (int l = 1; l<=6;l++) {
-            if ((l=1 || l=2 ) || (l = 5 || l=6)) {
-                for (int c =1; c<=6; c++) {
-                if ((c=1 || c=2 ) || (c = 5 || c=6)) {
-                    
-                }
+    public void patata(Grille g){
+        for (int l = 0; l <= 6;l++) {
+            for (int c = 0; c <= 6; c++) {
+                if ((l==1 || l==2 ) || (l == 5 || l== 6)) {
+                    if ((c==1 || c==2 ) || (c == 5 || c==6)) {
+                        continue;
+                    }
+                } else {
+                    g.addTuiles((l*6 + c),(new Tuiles(listeTuile[l*6 + 6], new CoorD(l,c) )));
             }
-            }
-            
         }
     }
     

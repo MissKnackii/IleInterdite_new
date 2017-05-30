@@ -9,15 +9,15 @@ package Modele;
  *
  * @author chaulaic
  */
-public class Coordonnées {
+public class CoorD {
     public int colonne;
     public int ligne;
     public Tuiles tuile;
     
-    public void Coordonnées(int colonne, int ligne, Tuiles tuile) {
-        this.setColonne(colonne);
-        this.setLigne(ligne);
-        this.tuile = tuile;
+    CoorD(int colonne, int ligne) {
+        this.colonne = colonne;
+        this.ligne = ligne;
+        this.tuile = null;
     }
 
     public int getColonne() {

@@ -19,13 +19,16 @@ public class Tuiles {
     Tresor tresor;
     Aventurier departAventurier;
     ArrayList<Aventurier> possedeAventurier;
-    Coordonnées coordonnée;
+    CoorD coordonnées;
     
-    public void tuiles(String nom, Etat etat, Color couleur, Tresor tresor) {
+    Tuiles(String nom, CoorD c) {
         this.setNom(nom);
-        this.setEtat(etat);
-        this.setCouleur(couleur);
-        this.setTresor(tresor);
+        this.etat = null;
+        this.couleur = null;
+        this.tresor = null;
+        this.departAventurier = null;
+        this.possedeAventurier = new ArrayList();
+        this.coordonnées = c;
     }
 
     /**
@@ -73,8 +76,8 @@ public class Tuiles {
     /**
      * @return the coordonnée
      */
-    public Coordonnées getCoordonnée() {
-        return coordonnée;
+    public CoorD getCoordonnée() {
+        return coordonnées;
     }
 
     /**
@@ -122,8 +125,8 @@ public class Tuiles {
     /**
      * @param coordonnée the coordonnée to set
      */
-    private void setCoordonnée(Coordonnées coordonnée) {
-        this.coordonnée = coordonnée;
+    private void setCoordonnée(CoorD coordonnée) {
+        this.coordonnées = coordonnée;
     }
     
 }
