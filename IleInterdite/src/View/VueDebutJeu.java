@@ -12,7 +12,10 @@ import java.awt.Font;
 
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javafx.scene.paint.Color;
+import javax.swing.Action;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -29,12 +32,12 @@ import javax.swing.border.MatteBorder;
  *
  * @author cault
  */
-public class VueDebutJeu extends javax.swing.JFrame {
+public class VueDebutJeu extends javax.swing.JFrame{
 
     /**
      * @param args the command line arguments
      */
-    
+    private Observeur observeur;
     private final JFrame window;
     private final JPanel mainPanel;
     private final JPanel titlePanel;
@@ -52,7 +55,9 @@ public class VueDebutJeu extends javax.swing.JFrame {
     private final JButton go;
     private final JButton rules;
     
-    public VueDebutJeu() {
+    private boolean clicked = false;
+    
+    public VueDebutJeu(Observeur observeur) {
         this.window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         window.setSize(400, 300);
@@ -110,17 +115,47 @@ public class VueDebutJeu extends javax.swing.JFrame {
             
             southBorderPanel.add(go);
             southBorderPanel.add(rules);
+            
+            this.observeur = observeur;
         
         this.window.repaint();
+        
+        rules.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent me) {
+                clicked = true;
+                observeur.letRules(clicked);
+                System.out.println(clicked);
+                clicked = false;
+            }
+
+            @Override
+            public void mousePressed(MouseEvent me) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent me) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent me) {
+            }
+
+            @Override
+            public void mouseExited(MouseEvent me) {
+            }
+        });
     }
     
     
     public static void main(String[] args) {
         
-        VueDebutJeu debutJeu = new VueDebutJeu();
-        debutJeu.repaint();
+//        VueDebutJeu debutJeu;
+//        debutJeu = new VueDebutJeu(this);
+//        debutJeu.repaint();
         
         
     }
+
     
 }
