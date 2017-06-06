@@ -5,6 +5,8 @@
  */
 package ileinterdite;
 
+import View.VueDebutJeu;
+
 /**
  *
  * @author chaulaic
@@ -16,7 +18,7 @@ public class IleInterdite {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        VueDebutJeu debut = new VueDebutJeu();
     }
     
 }

@@ -58,6 +58,8 @@ public class VueDebutJeu extends javax.swing.JFrame {
         window.setSize(400, 300);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         window.setLocation(dim.width/2-window.getSize().width/2,dim.height/2-window.getSize().height/2);
+        
+        
         this.window.setVisible(true);
         this.window.setTitle("l'ile interdite");
         
@@ -109,7 +111,7 @@ public class VueDebutJeu extends javax.swing.JFrame {
             southBorderPanel.add(go);
             southBorderPanel.add(rules);
         
-        //this.window.repaint();
+        this.window.repaint();
     }
     
     
