@@ -5,7 +5,8 @@
  */
 package ileinterdite;
 
-import View.Observeur;
+import Utile.Message;
+import Utile.aMessage;
 import View.VueDebutJeu;
 import View.VueRules;
 
@@ -13,35 +14,18 @@ import View.VueRules;
  *
  * @author chaulaic
  */
-public class IleInterdite implements Observeur{
+public class IleInterdite{
 
-    /**
-     * @param args the command line arguments
-     */
+    static aMessage message;
+    
+    VueDebutJeu menu = new VueDebutJeu();
+    VueRules rules = new VueRules();
+    
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
     }
 
-    @Override
-    public void letBegin(boolean begin) {
-    }
 
-    @Override
-    public void letRules(boolean begin) {
-        if (begin){
-            VueRules rules = new VueRules();
-            System.out.println("lancement de l'ihm");
-        }
-    }
-
-    @Override
-    public void letMenu(boolean begin) {
-    }
-
-    @Override
-    public void menu(boolean b) {
-        VueDebutJeu debut = new VueDebutJeu(this);
-    }
     
 }

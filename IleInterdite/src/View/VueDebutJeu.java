@@ -6,6 +6,7 @@
 package View;
 
 import Utile.Pion;
+import Utile.aMessage;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -37,7 +38,8 @@ public class VueDebutJeu extends javax.swing.JFrame{
     /**
      * @param args the command line arguments
      */
-    private Observeur observeur;
+    private aMessage message;
+    
     private final JFrame window;
     private final JPanel mainPanel;
     private final JPanel titlePanel;
@@ -57,7 +59,7 @@ public class VueDebutJeu extends javax.swing.JFrame{
     
     private boolean clicked = false;
     
-    public VueDebutJeu(Observeur observeur) {
+    public VueDebutJeu() {
         this.window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         window.setSize(400, 300);
@@ -65,7 +67,7 @@ public class VueDebutJeu extends javax.swing.JFrame{
         window.setLocation(dim.width/2-window.getSize().width/2,dim.height/2-window.getSize().height/2);
         
         
-        this.window.setVisible(true);
+        //this.window.setVisible(true);
         this.window.setTitle("l'ile interdite");
         
         mainPanel = new JPanel(new BorderLayout());
@@ -116,17 +118,14 @@ public class VueDebutJeu extends javax.swing.JFrame{
             southBorderPanel.add(go);
             southBorderPanel.add(rules);
             
-            this.observeur = observeur;
+            
         
         this.window.repaint();
         
         rules.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent me) {
-                clicked = true;
-                observeur.letRules(clicked);
-                System.out.println(clicked);
-                clicked = false;
+                    message.RULES();
             }
 
             @Override

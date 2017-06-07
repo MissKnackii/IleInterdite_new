@@ -5,6 +5,7 @@
  */
 package View;
 
+import Utile.aMessage;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -39,6 +40,8 @@ public class VueRules extends javax.swing.JFrame{
     private final JScrollPane scroll;
     
     private final JButton resume;
+    
+    private aMessage message;
     /**
      */
     public VueRules() {
@@ -49,7 +52,7 @@ public class VueRules extends javax.swing.JFrame{
         window.setLocation(dim.width/2-window.getSize().width/2,dim.height/2-window.getSize().height/2);
         
         
-        this.window.setVisible(true);
+        //this.window.setVisible(true);
         this.window.setTitle("Règle du jeu L'ile interdite");
         
         mainPanel = new JPanel(new BorderLayout());
