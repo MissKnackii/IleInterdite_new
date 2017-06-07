@@ -6,6 +6,10 @@
 package Modele;
 
 import static Modele.Etat.Inondee;
+import Utile.Message;
+import Utile.aMessage;
+import View.VueMenu;
+import ileinterdite.IleInterdite;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -19,8 +23,16 @@ public class Controleur {
     private Grille grille;
     private ArrayList<Cartes> cartes;
     
+    private aMessage message;
+    
+    
+    
     
     public void jouer() {
+        
+    }
+    
+    public void lanceIHM(){
         
     }
     
@@ -59,6 +71,11 @@ public class Controleur {
     }
     
 }
-        
+  
+    
+    public Message Listen(){
+
+        return message.getMessage();
+    }
           
 }

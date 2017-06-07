@@ -9,12 +9,18 @@ package Utile;
  *
  * @author cault
  */
-public abstract class Message {
-    String[] messages = {"null","Menu","Rules","Grid"
-        
-    };
+public enum Message {
+    NULL,
+    MENU,
+    RULES,
+    GRID
     
-    public void MENU(){}
-    public void RULES(){}
-    public void GRID(){}
+    
+//    String[] messages = {"null","Menu","Rules","Grid"
+//        
+//    };
+//    
+//    public void MENU(){}
+//    public void RULES(){}
+//    public void GRID(){}
 }

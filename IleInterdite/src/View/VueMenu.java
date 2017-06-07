@@ -33,7 +33,7 @@ import javax.swing.border.MatteBorder;
  *
  * @author cault
  */
-public class VueDebutJeu extends javax.swing.JFrame{
+public class VueMenu extends javax.swing.JFrame{
 
     /**
      * @param args the command line arguments
@@ -59,7 +59,7 @@ public class VueDebutJeu extends javax.swing.JFrame{
     
     private boolean clicked = false;
     
-    public VueDebutJeu() {
+    public VueMenu() {
         this.window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         window.setSize(400, 300);
@@ -67,7 +67,7 @@ public class VueDebutJeu extends javax.swing.JFrame{
         window.setLocation(dim.width/2-window.getSize().width/2,dim.height/2-window.getSize().height/2);
         
         
-        //this.window.setVisible(true);
+        this.window.setVisible(true);
         this.window.setTitle("l'ile interdite");
         
         mainPanel = new JPanel(new BorderLayout());
@@ -149,9 +149,9 @@ public class VueDebutJeu extends javax.swing.JFrame{
     
     public static void main(String[] args) {
         
-//        VueDebutJeu debutJeu;
-//        debutJeu = new VueDebutJeu(this);
-//        debutJeu.repaint();
+        VueMenu debutJeu;
+        debutJeu = new VueMenu();
+        debutJeu.repaint();
         
         
     }

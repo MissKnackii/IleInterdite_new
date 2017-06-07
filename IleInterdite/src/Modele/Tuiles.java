@@ -5,6 +5,7 @@
  */
 package Modele;
 
+import Utile.Tresor;
 import java.awt.Color;
 import java.util.ArrayList;
 

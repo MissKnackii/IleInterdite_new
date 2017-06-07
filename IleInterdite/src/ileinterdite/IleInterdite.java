@@ -5,9 +5,9 @@
  */
 package ileinterdite;
 
+import Modele.Controleur;
 import Utile.Message;
-import Utile.aMessage;
-import View.VueDebutJeu;
+import View.VueMenu;
 import View.VueRules;
 
 /**
@@ -15,14 +15,32 @@ import View.VueRules;
  * @author chaulaic
  */
 public class IleInterdite{
-
-    static aMessage message;
     
-    VueDebutJeu menu = new VueDebutJeu();
-    VueRules rules = new VueRules();
+    static Controleur controleur = null;
+    private static Message message;
     
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //controleur.jouer();
+        
+        VueMenu menu = new VueMenu();
+        menu.setVisible(true);
+        
+        
+        VueRules rules = new VueRules();
+        
+        message = controleur.Listen();
+        
+        switch(message){
+            case RULES : rules.setVisible(true);
+                         menu.setVisible(false);
+                         break;
+            
+        }
+        
+        
+        
 
     }
 

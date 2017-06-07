@@ -9,32 +9,42 @@ package Utile;
  *
  * @author cault
  */
-public class aMessage extends Message{
-    String message;
+public class aMessage {
 
+    /**
+     * @param args the command line arguments
+     */
     
+    private Message message = Message.NULL;
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+    }
+
     aMessage(){
-        message = "null";
+        message =Message.NULL;
     }
     
-    public String getMessage() {
+    public Message getMessage() {
         return message;
     }
 
    
-    private void setMessage(String message) {
+    private void setMessage(Message message) {
         this.message = message;
     }
-    @Override
+
     public void MENU(){
-    message = "MENU";
+    message = Message.MENU;
     }
-    @Override
+
     public void RULES(){
-    message = "RULES";
+    message = Message.RULES;
     }
-    @Override
+
     public void GRID(){
-    message = "GRID";
+    message = Message.GRID;
     }
+    
 }

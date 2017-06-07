@@ -40,6 +40,8 @@ public class VueAventurier extends javax.swing.JFrame {
         window.setTitle(nomJoueur);
         mainPanel = new JPanel(new BorderLayout());
         this.window.add(mainPanel);
+        
+        window.setVisible(true);
 
         mainPanel.setBackground(new Color(230, 230, 230));
         mainPanel.setBorder(BorderFactory.createLineBorder(couleur, 2)) ;
