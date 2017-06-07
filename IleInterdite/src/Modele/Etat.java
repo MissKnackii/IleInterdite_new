@@ -12,6 +12,6 @@ package Modele;
 public enum Etat {
     Assechee,
     Inondee,
-    coulee
+    Coulee
     
 }

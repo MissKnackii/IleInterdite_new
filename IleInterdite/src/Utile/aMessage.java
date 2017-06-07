@@ -15,7 +15,7 @@ public class aMessage {
      * @param args the command line arguments
      */
     
-    private Message message = Message.NULL;
+    private Message message;
     
     public static void main(String[] args) {
         // TODO code application logic here
@@ -23,7 +23,7 @@ public class aMessage {
     }
 
     aMessage(){
-        message =Message.NULL;
+        message = Message.NULL;
     }
     
     public Message getMessage() {

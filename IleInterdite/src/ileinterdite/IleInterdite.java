@@ -16,7 +16,7 @@ import View.VueRules;
  */
 public class IleInterdite{
     
-    static Controleur controleur = null;
+    static Controleur controleur;
     private static Message message;
     
     public static void main(String[] args) {
@@ -24,18 +24,27 @@ public class IleInterdite{
         
         //controleur.jouer();
         
+        
         VueMenu menu = new VueMenu();
         menu.setVisible(true);
         
         
         VueRules rules = new VueRules();
+        rules.setVisible(false);
         
         message = controleur.Listen();
+        if (message==null){
+            System.out.println("null");
+        }else{
+            System.out.println("non null");
+        }
         
         switch(message){
             case RULES : rules.setVisible(true);
                          menu.setVisible(false);
                          break;
+                         
+            default : break;
             
         }
         
