@@ -26,6 +26,10 @@ public class Controleur {
     private aMessage message;
     
     
+    Controleur(){
+        niveauEaux = 1;
+        joueurs = new ArrayList<Aventurier>();
+    }
     
     
     public void jouer() {

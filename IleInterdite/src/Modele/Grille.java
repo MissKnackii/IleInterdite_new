@@ -16,10 +16,7 @@ import java.util.HashMap;
 public class Grille {
     private HashMap<Integer,Tuiles>aze = new HashMap<Integer,Tuiles>();
     private ArrayList<Tuiles> tuiles;
-
-    /**
-     * @return the tuiles
-     */
+    
     public ArrayList<Tuiles> getTuiles() {
         return tuiles;
     }

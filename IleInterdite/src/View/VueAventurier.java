@@ -5,8 +5,10 @@ package View;
 import Utile.Pion;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -35,7 +37,10 @@ public class VueAventurier extends javax.swing.JFrame {
     public VueAventurier (String nomJoueur, String nomAventurier, Color couleur){
 
         this.window = new JFrame();
-        window.setSize(350, 200);
+        
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        window.setSize(dim.width/7*1, dim.height/7*1);
+        window.setLocation(dim.width/14*13-window.getSize().width/2,dim.height/7*2-window.getSize().height/2);
 
         window.setTitle(nomJoueur);
         mainPanel = new JPanel(new BorderLayout());
