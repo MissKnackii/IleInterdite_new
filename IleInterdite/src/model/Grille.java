@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,20 +15,12 @@ import java.util.HashMap;
  */
 public class Grille {
     private HashMap<Integer,Tuiles>aze = new HashMap<Integer,Tuiles>();
-    private ArrayList<Tuiles> tuiles;
-    
-    public ArrayList<Tuiles> getTuiles() {
-        return tuiles;
-    }
-
-    /**
-     * @param tuiles the tuiles to set
-     */
-    public void setTuiles(ArrayList<Tuiles> tuiles) {
-        this.tuiles = tuiles;
-    }
     
     public void addTuiles(Integer i,Tuiles t) {
         aze.put(i, t);
+    }
+    
+    public Tuiles getTuiles(int k ){
+        return aze.get(k);
     }
 }

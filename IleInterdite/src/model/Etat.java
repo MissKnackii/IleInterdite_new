@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modele;
+package model;
 
 /**
  *
@@ -12,6 +12,6 @@ package Modele;
 public enum Etat {
     Assechee,
     Inondee,
-    Coulee
+    coulee
     
 }
